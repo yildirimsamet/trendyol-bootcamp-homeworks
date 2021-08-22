@@ -1,0 +1,9 @@
+@import "../../styles/_variables";
+.timer {
+  position: absolute;
+  left:50%;
+  top: 5px;
+  transform: translateX(-50%);
+  color: $white;
+  font-size: 22px;
+}

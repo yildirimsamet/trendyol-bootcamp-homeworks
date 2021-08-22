@@ -1,0 +1,12 @@
+.topSection{
+    padding: 15px 30px 15px 28px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 25px 0;
+}
+@media only screen and (max-width:1420px){
+    .topSection{
+        padding: 5px 10px 5px 7px;
+    }
+}

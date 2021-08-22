@@ -1,0 +1,26 @@
+@import '../../styles/_variables';
+.colonWrapper{
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.colonWrapper::before{
+    content: "";
+    position: absolute;
+    width: 132px;
+    height: 172px;
+    border: 6px solid lightgrey;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2);
+}
+@media only screen and (max-width:1420px){
+    .colonWrapper::before{
+        content: "";
+        border: 4px solid lightgrey;
+        width: 96px;
+        height: 116px;
+        
+    }
+}

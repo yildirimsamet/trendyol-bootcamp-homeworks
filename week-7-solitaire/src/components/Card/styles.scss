@@ -1,0 +1,71 @@
+@import '../../styles/_variables';
+@import '../../styles//_mixins';
+
+.card{
+    background: white;
+    width: 135px;
+    height: 175px;
+    border-radius:10px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    @include grab-cursor;
+   &:active{
+    @include grabbing-cursor;
+   }
+   &Image{
+       width: 135px;
+       height: 175px;
+   }
+    &Main{
+        font-size: 40px;
+    }
+    &Badge{
+        position: absolute;
+        font-size: 24px;
+         font-weight: 500;
+    }
+    &Top{
+        &Left{
+           top:4px;
+           left: 4px;
+        }
+        &Right{
+            top: 4px;
+            right: 4px;
+        }
+    }
+    &Bottom{
+        &Left{
+            bottom: 4px;
+            left: 4px;
+        }
+        &Right{
+            bottom: 4px;
+            right: 4px;
+        }
+    }
+
+}
+@media only screen and (max-width:1420px){
+    .card{
+        width: 100px;
+        height: 125px;
+       &Image{
+           width: 100px;
+           height: 125px;
+       }
+        &Main{
+            font-size: 20px;
+        }
+        &Badge{
+            position: absolute;
+            font-size: 18px;
+             font-weight: 500;
+        }
+       
+    
+    }
+}
