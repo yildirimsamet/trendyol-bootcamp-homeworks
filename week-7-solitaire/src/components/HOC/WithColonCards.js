@@ -167,15 +167,15 @@ const WithColonCards = ({ children }) => {
     const firstCard = reversedCards[0];
     const thirteenthCard = reversedCards[12];
 
-    const valueFirstCard = firstCard?.value; //ilk kartın as olması lazım value=1;
-    const valueThirteenthCard = thirteenthCard?.value; //son kartın Papaz olması lazım value=13;
+    const valueFirstCard = firstCard?.value; //ilk kartın papaz olması lazım value=13;
+    const valueThirteenthCard = thirteenthCard?.value; //son kartın as olması lazım value=1;
 
     const isFirstCardDown = firstCard?.isDown; // Tabiki kartların açık olması lazım :) yoksa üstteki kapalı kartlarıda seriye dahil edebilir
     const isThirteenthCardDown = thirteenthCard?.isDown;
 
     if (
-      valueFirstCard === "1" &&
-      valueThirteenthCard === "13" &&
+      valueFirstCard === "13" &&
+      valueThirteenthCard === "1" &&
       !isFirstCardDown &&
       !isThirteenthCardDown
     ) {

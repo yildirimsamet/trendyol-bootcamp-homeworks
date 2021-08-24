@@ -41,7 +41,7 @@ const Colon = ({ cards, id }) => {
 
     if (droppedColonLastItem?.id) {
       //Eger dropladıgımız alanda son kart var ise değeri, dragladıgımız kartın degerinin bir fazlası olmalı
-      if (+droppedColonLastItem.value - 1 !== +draggedItem.value) {
+      if (+droppedColonLastItem.value + 1 !== +draggedItem.value) {
         toast.error("Yanlış Hamle !")
         return;
       }
@@ -91,7 +91,7 @@ const Colon = ({ cards, id }) => {
             thisColonsCards.cards
               .slice(+wantedCardIndex + 1)
               .forEach((item, index) => {
-                if (+item.value === thisCardvalue - 1) {
+                if (+item.value === +thisCardvalue + 1) {
                   thisCardvalue = +item.value;
                 } else {
                   isDraggable = false;
