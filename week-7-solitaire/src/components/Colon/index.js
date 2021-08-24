@@ -40,7 +40,7 @@ const Colon = ({ cards, id }) => {
       colonCards[droppedColon].cards[colonCards[droppedColon].cards.length - 1];
 
     if (droppedColonLastItem?.id) {
-      //Eger dropladıgımız alanda son kart var ise değeri, dragladıgımız kartın degerinin bir fazlası olmalı
+      //Eger dropladıgımız alanda son kart var ise değeri, dragladıgımız kartın degerinin bir eksiği olmalı
       if (+droppedColonLastItem.value + 1 !== +draggedItem.value) {
         toast.error("Yanlış Hamle !")
         return;
@@ -81,7 +81,7 @@ const Colon = ({ cards, id }) => {
         {!!cards.length &&
           cards.map((card, index) => {
             //Kartları dönen bir map fakat kart dağıtılmadan draggable prop olarak geçiyor
-            //Kartın draggable'ı otomatik true başlar bulundugu indexten itibaren alta dogru bütün kartlar bir azalarak gidiyorsa o kart ancak öyle draggable olabilir. Kuralı bozan herhangi bir durumda direk draggable false olur;
+            //Kartın draggable'ı otomatik true başlar bulundugu indexten itibaren alta dogru bütün kartlar bir artarak gidiyorsa o kart ancak öyle draggable olabilir. Kuralı bozan herhangi bir durumda direk draggable false olur;
 
             let isDraggable = true;
             const wantedCardIndex = thisColonsCards.cards.findIndex(
